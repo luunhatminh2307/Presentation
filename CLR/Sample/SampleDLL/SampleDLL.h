@@ -7,10 +7,12 @@
 
 namespace SampleDLL
 {
+	//関数とクラスをエクスポート
+
 	SAMPLEDLL_API int SumFunction(int a, int b);
 
 	class SAMPLEDLL_API Calculator {
 	public:
-		static int SumMethod(int a, int b);
+		int SumMethod(int a, int b);
 	};
 }

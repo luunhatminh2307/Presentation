@@ -7,27 +7,32 @@ using namespace System::Runtime::CompilerServices;
 
 
 namespace SampleCLI {
-	int SumFunction2(int a, int b)
-	{
-		return SampleDLL::SumFunction(a, b);
-	}
-
 	[Extension]
     public ref class Math
 	{
 	public:
-		static int SumFunction(int a, int b)
+		//DLLのSumFunction()のラッパー関数
+		static int SumFunction_CLI(int a, int b)
 		{
 			return SampleDLL::SumFunction(a, b);
 		}
 	};
 
-	public ref class Caculator
+	//Calculatorのラッパークラスの作成
+	public ref class Caculator_CLI
 	{
+		SampleDLL::Calculator* m_calculator;
 	public :
-		static int SumMethod(int a,int b)
+		Caculator_CLI() {
+			m_calculator = new SampleDLL::Calculator();
+		}
+		~Caculator_CLI() {
+			delete m_calculator;
+		}
+
+		int SumMethod(int a,int b)
 		{
-			return SampleDLL::SumFunction(a, b);
+			return m_calculator->SumMethod(a, b);
 		}
 	};
 }

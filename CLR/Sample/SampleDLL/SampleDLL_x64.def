@@ -3,3 +3,7 @@ EXPORTS
 ??4Calculator@SampleDLL@@QEAAAEAV01@$$QEAV01@@Z
 ??4Calculator@SampleDLL@@QEAAAEAV01@AEBV01@@Z
 ?SumMethod@Calculator@SampleDLL@@SAHHH@Z
+?CreateCalculator@SampleDLL@@YAPEAVCalculator@1@XZ
+?DeleteCalculator@SampleDLL@@YAXPEAVCalculator@1@@Z
+?CalculatorSum@SampleDLL@@YAHHH@Z
+?CalculatorSum@SampleDLL@@YAHPEAVCalculator@1@HH@Z

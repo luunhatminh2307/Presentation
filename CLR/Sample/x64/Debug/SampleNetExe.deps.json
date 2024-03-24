@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "SampleNetExe/1.0.0": {
+        "dependencies": {
+          "SampleCLI": "1.0.0"
+        },
+        "runtime": {
+          "SampleNetExe.dll": {}
+        }
+      },
+      "SampleCLI/1.0.0": {
+        "runtime": {
+          "SampleCLI.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SampleNetExe/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SampleCLI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
