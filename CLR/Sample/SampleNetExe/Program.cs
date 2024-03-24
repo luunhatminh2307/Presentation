@@ -45,20 +45,29 @@ namespace SampleNetExe
                           + $"res_sumMethod_CLI = {res_sumMethod_CLI}");
         }
 
-        [DllImport("SampleDLL.dll", EntryPoint = "?SumFunction@SampleDLL@@YAHHH@Z")]
+        [DllImport("SampleDLL.dll", CallingConvention = CallingConvention.Cdecl,
+            EntryPoint = "?SumFunction@SampleDLL@@YAHHH@Z")]
         public static extern int SumFunction_PInvoke(int a, int b);
 
 
+
         //Calculatorクラスの直接メモリ管理を行う場合
-        [DllImport("SampleDLL.dll", EntryPoint = "?CreateCalculator@SampleDLL@@YAPEAVCalculator@1@XZ")]
+        [DllImport("SampleDLL.dll", CallingConvention = CallingConvention.Cdecl, 
+            EntryPoint = "?CreateCalculator@SampleDLL@@YAPEAVCalculator@1@XZ")]
         public static extern IntPtr CreateCalculator_PInvoke();
-        [DllImport("SampleDLL.dll", EntryPoint = "?CalculatorSum@SampleDLL@@YAHPEAVCalculator@1@HH@Z")]
+
+        [DllImport("SampleDLL.dll", CallingConvention = CallingConvention.Cdecl, 
+            EntryPoint = "?CalculatorSum@SampleDLL@@YAHPEAVCalculator@1@HH@Z")]
         public static extern int CalculatorSum_PInvoke(IntPtr calculator,int a, int b);
-        [DllImport("SampleDLL.dll", EntryPoint = "?DeleteCalculator@SampleDLL@@YAXPEAVCalculator@1@@Z")]
+
+        [DllImport("SampleDLL.dll", CallingConvention = CallingConvention.Cdecl, 
+            EntryPoint = "?DeleteCalculator@SampleDLL@@YAXPEAVCalculator@1@@Z")]
         public static extern void DeleteCalculator_PInvoke(IntPtr calculator);
 
+
         //Calculatorクラスの直接メモリ管理を行わない場合
-        [DllImport("SampleDLL.dll", EntryPoint = "?CalculatorSum@SampleDLL@@YAHHH@Z")]
+        [DllImport("SampleDLL.dll", CallingConvention = CallingConvention.Cdecl,
+            EntryPoint = "?CalculatorSum@SampleDLL@@YAHHH@Z")]
         public static extern int CalculatorSum_PInvoke(int a, int b);
     }
 }
