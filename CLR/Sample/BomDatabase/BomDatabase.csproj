@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- これがないとAssemblyInfoの内容が自動生成され自前定義と衝突する -->
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <ApplicationIcon />
+    <OutputType>WinExe</OutputType>
+    <StartupObject />
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DenkiExtensions\DenkiExtensionsEx\DenkiExtensionsEx.csproj" />
+    <ProjectReference Include="..\DenkiExtensions\DenkiExtensions\DenkiExtensions.vcxproj" />
+  </ItemGroup>
+</Project>

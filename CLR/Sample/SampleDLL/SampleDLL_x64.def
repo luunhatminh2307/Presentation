@@ -1,0 +1,5 @@
+EXPORTS
+?SumFunction@SampleDLL@@YAHHH@Z
+??4Calculator@SampleDLL@@QEAAAEAV01@$$QEAV01@@Z
+??4Calculator@SampleDLL@@QEAAAEAV01@AEBV01@@Z
+?SumMethod@Calculator@SampleDLL@@SAHHH@Z
